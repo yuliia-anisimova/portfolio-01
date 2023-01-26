@@ -1,13 +1,13 @@
 :root {
-    --branding-color: #885df1;
-    --default-font-family: "Poppins", sans-serif;
-    --heading-font-family: "Playfair display", serif;
-    --secondary-color: #f9f7fe;
-    --text-color: #272142;
+  --branding-color: #885df1;
+  --default-font-family: "Poppins", sans-serif;
+  --heading-font-family: "Playfair display", serif;
+  --secondary-color: #f9f7fe;
+  --text-color: #272142;
 }
 
 body {
-    font-family: var(--default-font-family);
+  font-family: var(--default-font-family);
 }
 
 h1 {
@@ -77,18 +77,92 @@ p {
 .btn-branding {
   font-size: 18px;
   line-height: 27px;
-  background: linear-gradient(110.6deg, rgb(184, 142, 252) 2.2%, rgb(104, 119, 244) 100.2%);
+  background: linear-gradient(
+    110.6deg,
+    rgb(184, 142, 252) 2.2%,
+    rgb(104, 119, 244) 100.2%
+  );
   color: #ffffff;
   padding: 12px 20px;
   border-radius: 10px;
 }
 
+.portfolio {
+  padding: 50px;
+}
+
+.portfolio h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.portfolio h2 {
+  font-family: var(--default-font-family);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.img-container {
+  background: var(--secondary-color);
+  padding: 30px 10px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container img {
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #885df1);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+
+.layer a {
+  margin-top: 20px;
+  color: var(--branding-color);
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: var(--secondary-color);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.img-container:hover img {
+  transform: scale(1.1);
+}
+
+.img-container:hover .layer {
+  height: 100%;
+}
+
 @media (max-width: 960px) {
-  h1 {
+  .about-section h1 {
     font-size: 44px;
-    line-height: 2;
+    line-height: 1.5;
   }
-  
+
   .hero {
     padding: 80px 20px;
   }
@@ -101,6 +175,9 @@ p {
   .about-section-content {
     padding: 0;
   }
+
+  .portfolio h1 {
+    font-size: 25px;
+    line-height: 1.5;
+  }
 }
-
-
