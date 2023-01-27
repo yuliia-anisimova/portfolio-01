@@ -157,7 +157,62 @@ p {
   height: 100%;
 }
 
+/* Footer */
+footer {
+  margin: 60px 0;
+}
+
+footer .contact-box {
+  background: var(--secondary-color);
+  padding: 40px 70px;
+  border-radius: 15px;
+}
+
+footer .contact-box h3 {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: var(--heading-font-family);
+}
+
+footer .contact-box p {
+  font-size: 18px;
+}
+
+footer .email-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+footer .email-link:hover {
+  color: var(--branding-color);
+}
+
+footer  .social-links a {
+  margin: 0 20px;
+  color: var(--branding-color);
+  background: var(--secondary-color);
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 150ms ease-in-out;
+}
+
+footer .social-links a:hover {
+  color: var(--secondary-color);
+  background: var(--branding-color);
+}
+
 @media (max-width: 960px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 30px;
+  }
+
   .about-section h1 {
     font-size: 44px;
     line-height: 1.5;
@@ -179,5 +234,9 @@ p {
   .portfolio h1 {
     font-size: 25px;
     line-height: 1.5;
+  }
+
+  footer .email-link {
+    font-size: 20px;
   }
 }
