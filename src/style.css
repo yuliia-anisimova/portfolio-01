@@ -214,6 +214,23 @@ p {
   background: var(--branding-color);
 }
 
+.contact-right form {
+  margin-top: 60px;
+  width: 100%;
+}
+
+form input, form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #eae5fe;
+  padding: 15px;
+  margin: 15px 0;
+  color: var(--text-color);
+  border-radius: 10px;
+  font-size: 18px;
+}
+
 /* Footer */
 footer {
   margin: 60px 0;
