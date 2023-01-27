@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -104,11 +104,11 @@
             >
           </div>
           <div class="col contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Your Email"
                 required
               />
@@ -123,5 +123,16 @@
         </div>
       </div>
     </div>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyjUOIOcQCMcHfWZQSIKx4eHVxffjxKrd9xTQGIiQiu6q8cN-HcSxqtRVGMEbr_5ztI/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
